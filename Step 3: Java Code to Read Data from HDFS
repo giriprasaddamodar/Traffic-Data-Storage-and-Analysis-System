@@ -1,0 +1,26 @@
+import java.io.*;
+import org.apache.hadoop.conf.Configuration;
+import org.apache.hadoop.fs.*;
+
+public class TrafficDataProcessor {
+    public static void main(String[] args) throws IOException {
+        // Hadoop Configuration
+        Configuration conf = new Configuration();
+        FileSystem fs = FileSystem.get(conf);
+        
+        // HDFS file path
+        Path filePath = new Path("/traffic_data/local_traffic_data.csv");
+
+        // Reading file from HDFS
+        BufferedReader br = new BufferedReader(new InputStreamReader(fs.open(filePath)));
+        String line;
+        System.out.println("Traffic Data Analysis:");
+        
+        // Processing each line
+        while ((line = br.readLine()) != null) {
+            String[] values = line.split(",");
+            System.out.println("Location: " + values[1] + ", Vehicle Count: " + values[2] + ", Speed: " + values[3] + " km/h");
+        }
+        br.close();
+    }
+}
