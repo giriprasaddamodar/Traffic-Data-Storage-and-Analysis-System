@@ -1,0 +1,2 @@
+hdfs dfs -mkdir /traffic_data
+hdfs dfs -put local_traffic_data.csv /traffic_data/
