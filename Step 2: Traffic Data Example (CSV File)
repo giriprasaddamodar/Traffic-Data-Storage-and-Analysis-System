@@ -1,0 +1,4 @@
+Timestamp, Location, Vehicle_Count, Avg_Speed (km/h)
+2025-02-24 08:00, Main Road, 120, 40
+2025-02-24 09:00, Highway, 300, 80
+2025-02-24 10:00, City Center, 150, 30
