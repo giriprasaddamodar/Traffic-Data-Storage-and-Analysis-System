@@ -46,6 +46,7 @@ Location: City Center, Vehicle Count: 150, Speed: 30 km/h
 This project stores traffic data in HDFS and retrieves/analyzes it using Java.
 Can be expanded with real-time data (IoT sensors, API integration).
 Helps in urban planning, congestion analysis, and traffic prediction.
+
 💡 Next Steps:
 Add Data Visualization (Power BI, Python Matplotlib) or Real-time Traffic Sensors to this project? 🚦📊
 
